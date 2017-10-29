@@ -1,0 +1,46 @@
+platform :ios, '8.0'
+inhibit_all_warnings!
+
+#source 'https://github.com/CocoaPods/Specs.git'
+
+def shared_pods
+    pod 'SDWebImage','3.8.2'
+    #pod 'SDWebImage/WebP'
+    pod 'YYCache','1.0.4'
+    pod 'YYModel','1.0.4'
+    pod 'YTKNetwork','2.0.3'
+    pod 'Aspects','1.4.1'
+    pod 'MLeaksFinder','0.2.1'
+    pod 'OpenShare','0.0.1'
+    pod 'RNCryptor','3.0.1'
+    #pod 'JSPatch'
+    #pod 'DZNEmptyDataSet','1.8.1'
+    pod 'NJKWebViewProgress','0.2.3'
+    pod 'MBProgressHUD','1.0.0'
+    pod 'Masonry','1.0.2'
+    pod 'BlocksKit','2.2.5'
+    pod 'pop','1.0.9'
+    pod 'FXBlurView','1.6.4'
+    pod 'FMDB','2.6.2'
+    pod 'CocoaLumberjack','3.0.0'
+    pod 'UMengAnalytics-NO-IDFA','4.1.9'
+    pod 'JPush’,’3.0.2’
+    #pod 'FDFullscreenPopGesture','1.1'
+    pod 'MJRefresh','3.1.12'
+    pod 'FCUUID','1.3.1'
+    pod 'IQKeyboardManager','4.0.8'
+    pod 'OHHTTPStubs','5.2.3'
+end
+
+target 'TTT' do
+    shared_pods
+end
+
+#target 'QDEwalletDev' do
+#    shared_pods
+#end
+
+#target 'QDEwalletTests' do
+    #不要shared_pods，不然单元测试时会出现One of the two will be used. Which one is undefined.
+#    inherit! :search_paths
+#end
